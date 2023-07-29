@@ -16,8 +16,10 @@
     <body>
         <?php
         include "data/BookImp.php";
+        include "data/AuthorImp.php";
 
         $bookImp = new BookImpl();
+        $authorImp = new AuthorImp();
         ?>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
