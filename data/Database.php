@@ -1,6 +1,7 @@
 <?php
 
 class Database {
+    static $conn;
     /**
      * Obtiene la conexion a la base de datos.
      */
@@ -11,7 +12,8 @@ class Database {
         $password = "1234";
 
         try {
-            return new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+            $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+            return $conn;
         } catch (PDOException $e) {
             echo "Connection failed: ". $e->getMessage();
         }
