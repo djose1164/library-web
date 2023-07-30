@@ -15,9 +15,9 @@
     </head>
     <body>
         <?php
-        include "data/BookImp.php";
+        include "data/AuthorImp.php";
 
-        $bookImp = new BookImpl();
+        $authorImp = new AuthorImp();
         ?>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +26,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Libros</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Libros</a></li>
                         <li class="nav-item"><a class="nav-link" href="authors.php">Autores</a></li>
                     </ul>
                 </div>
@@ -36,8 +36,8 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Mira nuestra biblioteca</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Contamos con una gran variedad de titulos</p>
+                    <h1 class="display-4 fw-bolder">Conoce a nuestros autores</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Contamos con los autores mas reconocidos</p>
                 </div>
             </div>
         </header>
@@ -46,20 +46,20 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <?php
-                    $books = $bookImp->allBooks();
-                    foreach ($books as $book) {
+                   $authors = $authorImp->allAuthores();
+                    foreach ($authors as $author) {
                         echo '
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://i.fbcd.co/products/original/ae2d64e634f5beaa6f0e867d529ece28f0504e9e24fc4d5e0d6fd21f0a05df7f.jpg" alt="..." />
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png?20170328184010" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">'.$book["titulo"].'</h5>
+                                    <h5 class="fw-bolder">'.$author["nombre"]. $author["apellido"].'</h5>
                                     <!-- Product price-->
-                                    $'.$book["precio"].'
+                                    '.$author["pais"].'
                                 </div>
                             </div>
                         </div>
