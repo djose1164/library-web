@@ -1,4 +1,5 @@
 <?php
+include "Database.php";
 include "AuthorDao.php";
 
 class AuthorImp implements AuthorDao {
