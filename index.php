@@ -28,6 +28,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Libros</a></li>
                         <li class="nav-item"><a class="nav-link" href="authors.php">Autores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
